@@ -190,7 +190,7 @@ client.focused          #ffffff #ffffff #ffffff #ffffff #ffffff
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec picom
-exec feh --bg-scale /home/epicnuss55/Pictures/archpaper.png
+exec feh --bg-scale $HOME/Pictures/archpaper.png
 exec conky
 exec volctl
 exec $HOME/.config/launch.sh
