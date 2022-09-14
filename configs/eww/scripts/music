@@ -1,0 +1,27 @@
+#!/bin/bash
+
+case $1 in
+cover)
+    Cover=~/.config/eww/tmp/music/cover.png
+    bkpCover=~/.config/eww/tmp/music/music.png
+    albumart="$(playerctl --player=spotify metadata mpris:artUrl | sed -e 's/open.spotify.com/i.scdn.co/g')"
+    [ $(playerctl --player=spotify metadata mpris:artUrl) ] && curl -s "$albumart" --output $Cover || cp $bkpCover $Cover
+    echo "$Cover"
+    ;;
+title)
+    title=$(playerctl --player=spotify metadata --format {{title}})
+    [ -z "$title" ] && title="Play Something"
+    echo "$title"
+    ;;
+artist)
+    artist=$(playerctl --player=spotify metadata --format {{artist}})
+    [ -z "$artist" ] && artist="Artist"
+    echo "$artist"
+    ;;
+icon)
+    icon=""
+    [ $(playerctl --player=spotify status) = "Playing" ] && icon=""
+    [ $(playerctl --player=spotify status) = "Paused" ] && icon=""
+    echo "$icon"
+    ;;
+esac

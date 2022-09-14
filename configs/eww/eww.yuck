@@ -1,0 +1,204 @@
+
+
+
+
+(defwindow blur
+  :geometry (geometry
+    :y      "0px"
+    :x      "0px"
+    :height "1080px"
+    :width  "1920px"
+    :anchor "top left"
+  )
+  :windowtype "normal"
+  :wm-ignore true
+  :stacking "bg"
+  ""
+)
+
+(defwindow powermenuw
+  :geometry (geometry
+    :y      "400px"
+    :x      "0px"
+    :anchor "center"
+  )
+  :windowtype "desktop"
+  :wm-ignore true
+  :stacking "bg"
+  (powermenu))
+
+(defwidget powermenu []
+  (box :spacing 0 :orientation "h" :halign "center" :valign "center" :class "powermenu" :space-evenly "true"
+    (button :class "powerbuttons"
+      :onclick "shutdown now"
+      ""
+    )
+    (button
+      :class "powerbuttons"
+      :onclick "reboot"
+      ""
+    )
+    (button
+      :class "powerbuttons"
+      :onclick "betterlockscreen -l blur 1"
+      ""
+    )
+    (button
+      :class "powerbuttons"
+      :onclick "i3-msg exit"
+      ""
+    )
+  )
+)
+
+(defwindow mainw
+  :geometry (geometry
+    :y      "0px"
+    :x      "0px"
+    :anchor "center"
+  )
+  :windowtype "desktop"
+  :wm-ignore true
+  :stacking "bg"
+  (main))
+
+(defwidget main []
+  (box :spacing 0 :orientation "v" :halign "center" :valign "center" :class "main" :space-evenly "false"
+    (box :spacing 0 :orientation "h" :halign "fill" :valign "fill"  :space-evenly "false"
+      (box :spacing 0 :width 400 :height 200 :orientation "v" :halign "center" :valign "center"  :space-evenly "false" :class "weather"
+        (box :orientation "h" :halign "center" :valign "center" :space-evenly "false"
+          (label :class "weathericon" :text icon)
+          (label :class "weathertemp" :text temp)
+        )
+        (label :class "weatherdesc" :text desc)
+        
+      )
+      (box :orientation "v" :width 400 :height 200 :halign "center" :valign "center" :spacing 5 :class "datentime"
+        (box :orientation "h" :halign "center" :valign "center" :spacing 10
+          (label :class "clocktime" :text hours)
+          (label :class "clockcolon" :text ":")
+          (label :class "clocktime" :text minutes)
+          (label :class "clockampm" :text pmamthing)
+        )
+        (label :class "daynmonth" :text monthsandstuff)
+      )
+    )
+    (box :spacing 0 :orientation "h" :halign "fill" :valign "fill"  :space-evenly "false"
+      (box :spacing 10 :orientation "h" :height 100 :halign "center" :valign "center" :class "playerctl"  :space-evenly "false"
+        (image :path musicimg :image-width 100 :image-height 100 :class "musicimg")
+        (box :spacing 10 :width 200 :orientation "v" :halign "fill" :valign "center" :space-evenly "false"
+          (label :class "musictitle" :limit-width 17 :text musictitle)
+          (label :class "musicartist" :limit-width 20 :text musicartist)
+          (box :spacing 10 :orientation "h" :halign "center" :valign "center" :class "musicbuttonwrapper" :space-evenly "true"
+            (button :class "musicbutton" :onclick "playerctl --player=spotify previous" "")
+            (button :class "musicbutton" :onclick "playerctl --player=spotify play-pause" musicicon)
+            (button :class "musicbutton" :onclick "playerctl --player=spotify next" "")
+          )
+        )
+      )
+      (box :orientation "h" :halign "center" :valign "center" :width 80 :height 100 :class "volnbri"
+        (box :orientation "v" :halign "center" :valign "center" :spacing 5 :space-evenly "false"
+          (scale :flipped "true" :orientation "v" :min 0 :max 100 :value vol :onchange "pamixer --set-volume {}%" :class "scale" )
+          (label :class "volbriicons" :text "")
+        )
+        (box :orientation "v" :halign "center" :valign "center" :spacing 5 :space-evenly "false"
+          (scale :flipped "true" :orientation "v" :min 0 :max 100 :value bri :onchange "brightnessctl set {}%" :class "scale" )
+          (label :class "volbriicons" :text "")
+        )
+      )
+      (box :vexpand "false" :hexpand "false" :width 350 :height 100 :class "usagecircles"
+        (box :orientation "h" :spacing 15 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+          (box :class "cpu_bar" :orientation "v" :spacing 10 :space-evenly "false" :vexpand "false" :hexpand "false"
+            (circular-progress :thickness 40 :class "sysval" :clockwise "true" :value cpu :active "false")
+            (label :class "usagetext" :text "CPU")
+          )
+          (box :class "mem_bar" :orientation "v" :spacing 10 :space-evenly "false" :vexpand "false" :hexpand "false"
+            (circular-progress :thickness 40 :class "sysval" :clockwise "true" :value mem :active "false")
+            (label :class "usagetext" :text "MEM")
+          )
+          (box :class "mem_bar" :orientation "v" :spacing 10 :space-evenly "false" :vexpand "false" :hexpand "false"
+            (circular-progress :thickness 40 :class "sysval" :clockwise "true" :value bat :active "false")
+            (label :class "usagetext" :text "BAT")
+          )
+        )
+      )
+    )
+    (box :spacing 0 :orientation "h" :halign "fill" :valign "fill"  :space-evenly "true"
+      (button :class "logobutton" :onclick "firefox-developer-edition | i3 workspace 1" "")
+      (button :class "logobutton" :onclick "xdg-open https://mail.google.com | i3 workspace 1" "")
+      (button :class "logobutton" :onclick "i3 workspace 0" "")
+      (button :class "logobutton" :onclick "i3 workspace 4" "")
+      (button :class "logobutton" :onclick "i3 workspace 3" "")
+      (button :class "logobutton" :onclick "xdg-open https://reddit.com | i3 workspace 1" "")
+    )
+  )
+)
+
+(defpoll desc
+  :interval "5s"
+  "cat ./tmp/weather/desc"
+)
+(defpoll temp
+  :interval "5s"
+  "cat ./tmp/weather/temp"
+)
+(defpoll icon
+  :interval "5s"
+  "cat ./tmp/weather/icon"
+)
+
+(defpoll hours
+  :interval "2s"
+  "date +%I"
+)
+(defpoll minutes
+  :interval "2s"
+  "date +%M"
+)
+(defpoll pmamthing
+  :interval "2s"
+  "date +%p"
+)
+(defpoll monthsandstuff
+  :interval "2s"
+  "date +'%A'"
+)
+
+(defpoll musicimg
+  :interval "1s"
+  "./scripts/music cover"
+)
+(defpoll musictitle
+  :interval "1s"
+  "./scripts/music title"
+)
+(defpoll musicartist
+  :interval "1s"
+  "./scripts/music artist"
+)
+(defpoll musicicon
+  :interval "1s"
+  "./scripts/music icon"
+)
+
+(defpoll bri
+  :interval "1ms"
+  "brightnessctl | grep -o '(.*' | tr -d '(%)'"
+  )
+  (defpoll vol
+    :interval "1ms"
+    "pamixer --get-volume"
+  )
+  
+  (defpoll cpu
+    :interval "1s"
+    "./scripts/cpu"
+  )
+  (defpoll mem
+    :interval "1s"
+    "./scripts/memory"
+  )
+  (defpoll bat
+    :interval "1s"
+    "cat /sys/class/power_supply/BAT0/capacity"
+  )

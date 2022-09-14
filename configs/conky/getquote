@@ -1,0 +1,8 @@
+#!/bin/bash
+
+JSON=$(curl -sf 'https://zenquotes.io/api/random')
+QUOTE=$(echo "$JSON" | jq -r '.[].q')
+SAYER=$(echo "$JSON" | jq -r '.[].a')
+
+echo "$QUOTE" > ~/.config/conky/tmp/quote
+echo "$SAYER" > ~/.config/conky/tmp/saidby
