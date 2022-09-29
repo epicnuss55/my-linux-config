@@ -178,10 +178,12 @@ bindsym $mod+p exec maim "/home/$USER/Pictures/shot.png"
 bindsym $mod+Shift+p exec maim --select "/home/$USER/Pictures/shot.png"
 
 bindsym $mod+r mode "resize"
+default_border pixel 4
 for_window [class=".*"] border pixel 2
-gaps inner 10
-gaps outer 5
-gaps top 40
+gaps inner 5
+gaps outer 12
+gaps top 62
+gaps bottom 62
 client.focused          #ffffff #ffffff #ffffff #ffffff #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
