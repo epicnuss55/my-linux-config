@@ -18,7 +18,8 @@ i made this based off of my own workstyle, if u like the themeing and u wanna ch
 * Arc-Dark *<-- WIDGET*
 * Kora Grey *<-- ICON*
 ## Pictures
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1019095290675986532/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1019095290936045608/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1019095291217055834/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1019413100476248165/shot.png)
+
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072334924693584/shot.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072335277019246/shot.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072335700635768/shot.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072336229105704/shot.png)
