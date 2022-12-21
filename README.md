@@ -8,7 +8,7 @@ i made this based off of my own workstyle, if u like the themeing and u wanna ch
 * dunst
 * eww
 * feh
-* picom
+* picom-jonaburg-git
 * polybar
 * betterlockscreen
 * kitty terminal *<-- if you have your own terminal, just copy and paste the colours and stuff lol*
