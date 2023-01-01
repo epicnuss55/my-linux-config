@@ -7,24 +7,52 @@ focused = i3.get_tree().find_focused().workspace().num
 out = ""
 
 if 1 == focused:
-    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
+    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
 else:
-    out += " " + "" + " "
+    exists = False
+    for ws in workspaces:
+        if ws.num == 1:
+            exists = True
+            out += " " + "" + " "
+            break
+    if not exists:
+        out += " " + "" + " "
 
 if 2 == focused:
-    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
+    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
 else:
-    out += " " + "" + " "
+    exists = False
+    for ws in workspaces:
+        if ws.num == 2:
+            exists = True
+            out += " " + "" + " "
+            break
+    if not exists:
+        out += " " + "" + " "
 
 if 3 == focused:
-    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
+    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
 else:
-    out += " " + "" + " "
+    exists = False
+    for ws in workspaces:
+        if ws.num == 3:
+            exists = True
+            out += " " + "" + " "
+            break
+    if not exists:
+        out += " " + "" + " "
 
 if 4 == focused:
-    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
+    out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
 else:
-    out += " " + "" + " "
+    exists = False
+    for ws in workspaces:
+        if ws.num == 4:
+            exists = True
+            out += " " + "" + " "
+            break
+    if not exists:
+        out += " " + "" + " "
 
 if 5 == focused:
     out += "%{B#3b4252}%{F#87fff1} " + "" + " %{B-}%{F-}"
