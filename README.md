@@ -20,7 +20,7 @@ i made this based off of my own workstyle, if u like the themeing and u wanna ch
 * Kora Grey *<-- ICON*
 ## Pictures
 
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072334924693584/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072335277019246/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072335700635768/shot.png)
-![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1025072336229105704/shot.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1059412946796679199/image.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1059412857890013184/image.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1059411236065910844/image.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1059411319209598976/image.png)
