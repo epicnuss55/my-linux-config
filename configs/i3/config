@@ -173,7 +173,7 @@ mode "resize" {
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym $mod+t exec nautilus
+bindsym $mod+t exec nemo
 bindsym $mod+p exec maim "/home/$USER/Pictures/shot.png"
 bindsym $mod+Shift+p exec maim --select "/home/$USER/Pictures/shot.png"
 
