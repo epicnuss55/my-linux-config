@@ -16,8 +16,8 @@ i made this based off of my own workstyle, if u like the themeing and u wanna ch
 * Just copy and paste the files into ur config
 * change up the eww/scripts/weather curl command and add ur own appid and location ID through openweatherapp
 ### gtk themes
-* Arc-Dark *<-- WIDGET*
-* Kora Grey *<-- ICON*
+* Nordic *<-- WIDGET*
+* Papirus-Dark *<-- ICON*
 ## Pictures
 
 ![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1059417302765944942/image.png)
