@@ -3,7 +3,7 @@
 guys pls dont bully me this is my first liinux rice :(
 i made this based off of my own workstyle, if u like the themeing and u wanna change stuff around, just `git clone
 ## Prerequisites
-* i3-gaps
+* i3
 * conky
 * dunst
 * eww
