@@ -7,6 +7,7 @@ i made this based off of my own workstyle, if u like the themeing and u wanna ch
 * conky
 * dunst
 * eww
+* Font Awesome 6
 * feh
 * picom-jonaburg-git
 * polybar
