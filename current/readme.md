@@ -4,6 +4,7 @@ You'll need the following things installed:
 * [dunst](https://github.com/dunst-project/dunst)
 * [i3wm](https://github.com/i3/i3)
 * [polybar](https://github.com/polybar/polybar)
+* [rofi](https://github.com/davatorium/rofi) - theme kindly stolen from [here](https://github.com/adi1090x/rofi)
 
 archpaper.jpg goes in `~/Pictures/`
 
