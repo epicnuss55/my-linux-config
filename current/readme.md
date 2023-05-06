@@ -10,3 +10,7 @@ You'll need the following things installed:
 archpaper.jpg goes in `~/Pictures/`
 
 and you're done!
+
+# Pictures:
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1104362778195660890/Screenshot_from_2023-05-06_20-53-55.png)
+![alt text](https://cdn.discordapp.com/attachments/934772407904907394/1104362778719965294/Screenshot_from_2023-05-06_20-57-51.png)
